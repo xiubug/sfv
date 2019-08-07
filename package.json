@@ -1,0 +1,37 @@
+{
+  "name": "sfv",
+  "version": "1.0.0",
+  "description": "Safely get a dot-notated property within an object. x = sfv(obj, 'a.b.x') ",
+  "main": "dist/sfv.js",
+  "browser": "dist/sfv.umd.js",
+  "module": "dist/sfv.es.js",
+  "scripts": {
+    "dev": "microbundle watch",
+    "build": "microbundle",
+    "prepublish": "npm run build",
+    "test": "node test",
+    "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sosout/sfv.git"
+  },
+  "keywords": [
+    "sfv",
+    "dot notation",
+    "dot"
+  ],
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "author": "Wei Changhua",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sosout/sfv/issues"
+  },
+  "homepage": "https://github.com/sosout/sfv#readme",
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}
